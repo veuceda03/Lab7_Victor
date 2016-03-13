@@ -1,0 +1,24 @@
+#pragma once
+
+#include <string>
+#include <iostream>
+using std::string;
+using std::ostream;
+using std::istream;
+
+class Polynomial{
+	int degree;
+	double* coeficients;
+  public:
+	explicit Polynomial(int);
+	Polynomial(const Polynomial&);
+	~Polynomial();
+	string toString()const;
+	void set(int, double);
+	const Polynomial operator()()const; // derivada
+	double operator()(double)const; // evaluacion
+	double operator()(double, double)const; // integral definida
+	friend ostream& operator<<(ostream&, const Polynomial&);
+	friend istream& operator>>(istream&, Polynomial&);
+};
+
