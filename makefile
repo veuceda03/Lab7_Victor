@@ -8,4 +8,4 @@ main.o: main.cpp polynomial.h
 	g++ -c main.cpp
 	
 clean:
-	rm *o main
+	rm *o main main

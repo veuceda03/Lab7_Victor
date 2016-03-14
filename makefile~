@@ -1,10 +1,10 @@
-main: Racional.o main.o
-	g++ Racional.o main.o -o main
+main: polynomial.o main.o
+	g++ polynomial.o main.o -o main
 
-Racional.o:	Racional.h Racional.cpp
-	g++ -c  Racional.cpp
+polynimial.o:	polynomial.h polynomial.cpp
+	g++ -c  polynomial.cpp
 	
-main.o: main.cpp Racional.h
+main.o: main.cpp polynomial.h
 	g++ -c main.cpp
 	
 clean:
